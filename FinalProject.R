@@ -2,8 +2,8 @@
 library(dplyr)   # For data manipulation
 
 # Step 2: Read the CSV data
-nba_data_salary <- read.csv("./FinalProject/nba_salary_data_2023_24.csv")
-nba_data_talent <- read.csv("./FinalProject/DARKO_player_talent_2024-05-01.csv")
+nba_data_salary <- read.csv("nba_salary_data_2023_24.csv")
+nba_data_talent <- read.csv("DARKO_player_talent_2024-05-01.csv")
 
 # Step 3: Merge datasets based on player names
 nba_data_salary$Salary <- as.numeric(gsub("\\$", "", nba_data_salary$Salary))
