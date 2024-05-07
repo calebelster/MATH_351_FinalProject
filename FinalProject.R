@@ -25,8 +25,7 @@ good_defensive_players <- filtered_data %>% filter(`D.DPM` > defensive_threshold
 offensive_mean <- mean(good_offensive_players$Salary)
 defensive_mean <- mean(good_defensive_players$Salary)
 
-offensive_pop_std <- sd(good_offensive_players$Salary)
-defensive_pop_std <- sd(good_defensive_players$Salary)
+pop_std <- sd(filtered_data$Salary)
 
 offensive_sample_std <- sd(good_offensive_players$Salary) * sqrt((length(good_offensive_players$Salary) - 1) / length(good_offensive_players$Salary))
 defensive_sample_std <- sd(good_defensive_players$Salary) * sqrt((length(good_defensive_players$Salary) - 1) / length(good_defensive_players$Salary))
@@ -75,8 +74,7 @@ t_test_result
 # Step 11: Print calculated statistics
 cat("Offensive Players Mean Salary:", offensive_mean, "\n")
 cat("Defensive Players Mean Salary:", defensive_mean, "\n")
-cat("Offensive Players Population Standard Deviation:", offensive_pop_std, "\n")
-cat("Defensive Players Population Standard Deviation:", defensive_pop_std, "\n")
+cat("Population Standard Deviation:", pop_std, "\n")
 cat("Offensive Players Sample Standard Deviation:", offensive_sample_std, "\n")
 cat("Defensive Players Sample Standard Deviation:", defensive_sample_std, "\n")
 cat("Number of Offensive Players:", offensive_count, "\n")
