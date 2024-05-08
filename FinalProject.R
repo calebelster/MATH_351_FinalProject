@@ -67,9 +67,11 @@ boxplot(good_defensive_players$Salary/1e6, main = "Salaries for Defensive Player
 
 # Step 9: Perform the Hypothesis Test
 t_test_result <- t.test(good_offensive_players$Salary, good_defensive_players$Salary)
+z_test_result <- t.test(good_offensive_players$Salary, good_defensive_players$Salary, var.equal = TRUE)
 
 # Step 10: Interpret the Results
 t_test_result
+z_test_result
 
 # Step 11: Print calculated statistics
 cat("Offensive Players Mean Salary:", offensive_mean, "\n")
